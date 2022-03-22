@@ -1,18 +1,18 @@
 import React from "react";
 import { Navbar } from './components';
-import { BrowserRouter as Router, Routes, Route} from "react-router-dom";
-import GlobalStyles from './globalStyles'
-import  Home  from '../src/pages/HomePage/Home'
+import { BrowserRouter, Routes, Route} from "react-router-dom";
+import GlobalStyles from './globalStyles';
+import Home from './pages/HomePage/Home';
 
 function App() {
   return (
-    <Router>
+    <BrowserRouter>
       <GlobalStyles />
       <Navbar/>
       <Routes>
-        <Route path='/' exact component={Home} />
+        <Route path='/' exactly element={<Home />} />
       </Routes>
-    </Router>
+    </BrowserRouter>
      
   );
 }
