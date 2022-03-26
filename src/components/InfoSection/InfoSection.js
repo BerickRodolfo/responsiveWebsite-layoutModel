@@ -18,8 +18,7 @@ import { Link } from 'react-router-dom'
 const InfoSection = (
   {
     lightBg, 
-    imgStart, 
-    lightTopLine, 
+    imgStart,  
     topLine, 
     lightText, 
     headLine,
@@ -38,7 +37,7 @@ const InfoSection = (
                   <InfoRow imgStart = {imgStart}>
                     <InfoColumn>
                       <TextWrapper> 
-                        <TopLine lighTopLine={lightTopLine}>{topLine}</TopLine>
+                        <TopLine lightText={lightText}>{topLine}</TopLine>
                         <Heading lightText={lightText}>{headLine}</Heading>
                         <Subtitle lightTextDesc={lightTextDesc}>{description}</Subtitle>
                         <Link to ="/sign-up">
