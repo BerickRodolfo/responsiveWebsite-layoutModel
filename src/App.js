@@ -1,19 +1,30 @@
 import React from "react";
-import { Navbar } from './components';
-import { BrowserRouter, Routes, Route} from "react-router-dom";
+import { Navbar, Footer } from './components/';
+import { BrowserRouter as Router, Routes, Route} from "react-router-dom";
 import GlobalStyles from './globalStyles';
 import Home from './pages/HomePage/Home';
+import Services from './pages/Services/Services';
+import Products from './pages/Products/Products.js';
+import SignUp from './pages/SignUp/SignUp.js';
+import ScrollToTop from "./components/ScrollToTop";
+
 
 function App() {
   return (
-    <BrowserRouter>
+    <>
+    <Router>
       <GlobalStyles />
-      <Navbar/>
+      <ScrollToTop />
+      <Navbar />
       <Routes>
-        <Route path='/' exactly element={<Home />} />
+        <Route exact path='/' element={<Home />} />
+        <Route exact path='/services' element={<Services />} />
+        <Route exact path='/products' element={<Products />} />
+        <Route exact path='/sign-up' element={<SignUp />} />
       </Routes>
-    </BrowserRouter>
-     
+      <Footer />
+    </Router>   
+    </>  
   );
 }
 

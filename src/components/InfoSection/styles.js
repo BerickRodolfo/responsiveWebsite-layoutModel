@@ -1,4 +1,4 @@
-import styled from 'styled-components'
+import styled from 'styled-components';
 
 export const InfoRow = styled.div`
     display: flex;
@@ -7,6 +7,7 @@ export const InfoRow = styled.div`
     align-items: center;
     flex-direction: ${({imgStart}) => (imgStart ? 'row-reverse' : 'row')
     };
+
 `
 
 export const InfoColumn = styled.div`
@@ -80,6 +81,6 @@ export const Img = styled.img`
 export const InfoSec = styled.div`
     color: #fff;
     padding: 160px 0;
-    background: ${({lightBg}) => lightBg ? '#fff' : '#101522'}
+    background: ${({lightBg}) => lightBg ? '#F5F5F5' : '#101522'}
 `
 

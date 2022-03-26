@@ -30,12 +30,16 @@ const Navbar = () => {
     setClick(!click)
   }
 
+  function closeMobileMenu(){
+    setClick(false);
+  }
+
   return (
     <>
       <IconContext.Provider value={{color: '#FFF'}}>
         <Nav> 
           <NavBarContainer>
-            <NavLogo to="/">
+            <NavLogo to="/" onClick={closeMobileMenu}>
               <NavIcon />
               VEX
             </NavLogo>
@@ -46,17 +50,17 @@ const Navbar = () => {
             </MobileIcon>
             <NavMenu onclick={handleClick} click={click}>
               <NavItem>
-                <NavLinks to='/'>Home</NavLinks>
+                <NavLinks to='/' onClick={closeMobileMenu}>Home</NavLinks>
               </NavItem>
               <NavItem>
-                <NavLinks to='/services'>Services</NavLinks>
+                <NavLinks to='/services' onClick={closeMobileMenu}>Services</NavLinks>
               </NavItem>
               <NavItem>
-                <NavLinks to='/products'>Products</NavLinks>
+                <NavLinks to='/products' onClick={closeMobileMenu}>Products</NavLinks>
               </NavItem>
-              <NavItemButton>
+              <NavItemButton onClick={closeMobileMenu}>
                 {button ? (
-                  <NavBtnLink to="/sign-up">
+                  <NavBtnLink to="/sign-up" >
                     <Button primary> Sign-Up</Button>
                   </NavBtnLink>
                 ) : (
